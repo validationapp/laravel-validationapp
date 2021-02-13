@@ -1,0 +1,65 @@
+{
+    "name": "validationapp/laravel-validationapp",
+    "description": "Laravel wrapper for Validation.app SDK",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Campbell",
+            "email": "adam@hotmeteor.com"
+        },
+        {
+            "name": "Yaz Jallad",
+            "email": "yazjallad@gmail.com"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "email",
+        "validation",
+        "validation.app",
+        "sdk",
+        "php"
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "validationapp/validationapp-sdk": "^0.1.0",
+        "illuminate/support": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4.2",
+        "nunomaduro/collision": "^5.0",
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validationapp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Validationapp\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Validationapp\\ValidationappServiceProvider"
+            ],
+            "aliases": {
+                "Validationapp": "Validationapp\\Facade"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

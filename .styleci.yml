@@ -1,5 +1,7 @@
 php:
-  preset: laravel
+  risky: false
+  version: 7
+  preset: recommended
   finder:
     exclude:
       - "modules"

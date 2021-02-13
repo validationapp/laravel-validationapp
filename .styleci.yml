@@ -1,8 +1,12 @@
 php:
   preset: laravel
   finder:
+    exclude:
+      - "modules"
+      - "node_modules"
+      - "storage"
+      - "vendor"
+    name: "*.php"
     not-name:
-      - index.php
-      - server.php
-  enabled:
-    - fully_qualified_strict_types
+      - "*.blade.php"
+      - "_ide_helper.php"
